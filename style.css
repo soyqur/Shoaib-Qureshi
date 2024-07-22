@@ -171,8 +171,8 @@ aside {
     justify-content: flex-start;
     align-items: center;
     z-index: 0;
-
-    transition: 2s;
+    overflow: scroll;
+    transition: 500ms;
     /* transform: translate(230px, 0px); */ 
     
 }
