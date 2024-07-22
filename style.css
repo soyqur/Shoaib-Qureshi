@@ -161,12 +161,12 @@ aside {
     
     position: fixed;
     top: 0;
-    right: 0;
-    /* right: -30%; */
+/*     right: 0; */
+    right: -30%;
     width: 20%;
     height: 100%;
     /* margin-top: 10%; */
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
