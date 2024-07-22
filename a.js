@@ -43,7 +43,7 @@ function showBar (){
     
     sidebar.style.zIndex = '999'
     sidebar.style.right = '0'
-    sidebar.style.transitionDelay = '0.1s'
+    // sidebar.style.transitionDelay = '0.1s'
     sidebar.style.display = 'flex'
     
 
