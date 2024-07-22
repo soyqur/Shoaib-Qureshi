@@ -574,13 +574,18 @@ footer {
      /* Aside bar----------------------- */
 
     
+    aside {
+        width: 30%;
+     }
+
+    
      aside ul {
-        margin-top: 7em;
+        margin-top: 6em;
         
     }
 
     aside ul li a {
-        font-size: 0.6em;
+        font-size: 0.9em;
        
         
     }
