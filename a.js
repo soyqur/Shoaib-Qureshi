@@ -56,3 +56,9 @@ function hideBar (){
     sidebar.style.right= '-30%'
 
 }
+
+function email () {
+    alert ("Please fill the Contact Form");
+
+}
+
