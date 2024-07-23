@@ -142,6 +142,11 @@ body {
     box-shadow: 2px 2px 2px black inset;
 }
 
+@keyframes sqfade {
+    from {opacity: 1;}
+    from {opacity: 0;}
+}
+
 /* -----------Burger Menu------------------------------------- */
 
 .burger {
@@ -161,7 +166,7 @@ aside {
     
     position: fixed;
     top: 0;
-/*     right: 0; */
+    /* right: 0; */
     right: -30%;
     width: 20%;
     height: 100%;
@@ -172,6 +177,7 @@ aside {
     align-items: center;
     z-index: 0;
     overflow: scroll;
+
     transition: 500ms;
     /* transform: translate(230px, 0px); */ 
     
@@ -423,7 +429,7 @@ footer {
 
 
     .sq-name {
-        font-size: 1.5em;
+        font-size: 1.4em;
         margin: 0;
     }
 
@@ -491,7 +497,7 @@ footer {
     }
 
     aside ul li a {
-        font-size: 1em;
+        font-size: 1.5em;
        
         
     }
@@ -532,7 +538,7 @@ footer {
     }
 
     .sq-name {
-        font-size: 1.2em;
+        font-size: 1em;
     }
 
     
@@ -574,8 +580,8 @@ footer {
     
      /* Aside bar----------------------- */
 
-    
-    aside {
+
+     aside {
         width: 30%;
      }
 
