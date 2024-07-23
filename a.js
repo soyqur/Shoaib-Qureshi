@@ -45,20 +45,33 @@ function showBar (){
     sidebar.style.right = '0'
     // sidebar.style.transitionDelay = '0.1s'
     sidebar.style.display = 'flex'
-    
-
-    
-
 }
 
 function hideBar (){
     const sidebar = document.querySelector ('aside')
     sidebar.style.right= '-30%'
-
 }
+
 
 function email () {
     alert ("Please fill the Contact Form");
 
 }
 
+
+function nameChange () {
+    // document.getElementById("sq").innerHTML = "soyqureshi@gmail.com";
+
+    // document.querySelector(".sq").innerHTML = "Visit Contact";
+
+    const sq = document.querySelector(".sq")
+    const sqName = document.querySelector(".sq-name")
+
+
+    sq.innerHTML = ("soyqureshi@gmail.com");
+    sq.style.color = ("chartreuse");
+    sq.style.animation = "sqfade 0.1s linear 25 alternate";
+    sqName.style.fontSize = "auto"
+
+
+}
