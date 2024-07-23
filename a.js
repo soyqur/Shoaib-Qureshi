@@ -72,7 +72,5 @@ function nameChange () {
     sq.innerHTML = ("soyqureshi@gmail.com");
     sq.style.color = ("chartreuse");
     sq.style.animation = "sqfade 0.1s linear 25 alternate";
-    sqName.style.fontSize = "auto"
-
-
+  
 }
