@@ -9,21 +9,23 @@
 
 body {
     background-color: #fff5ee;
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw;
+    height: 100dvh; */
+   
 }
 
 .container {
     background-color: #fff5ee;
-    /* width: 100vw;
-    height: 100vh; */
+    width: 100vw;
+    height: 100dvh;
 
     display: grid;
     grid-template-columns: 0.5fr repeat(3, 1fr) 0.5fr;
     position: relative;
     padding: 1em;
     gap: 0.5em;
-    
+    /* flex-grow: 1; */
+   
     
     
 }
@@ -137,9 +139,10 @@ body {
     /* font-size: 2rem; */
     font-size: 2em;
     border: none;
-    margin: 1em;
+    margin: auto;
     border-radius: 2em;
     box-shadow: 2px 2px 2px black inset;
+    width: 100%;
 }
 
 /* -----------Burger Menu------------------------------------- */
@@ -279,19 +282,22 @@ main {
     grid-column: 2/5;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 1em;
+    
+    flex-grow: 1;
+   
     padding: 0.5em;
-    width: 100%;
-    height: 100vh;
+    /* height: 100dvh; */
+    
     
 }
 
 form {
     display: flex;
     flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
     gap: 2em;
-    margin-top: 10%;
+    margin-top: auto;
 }
 
 .getin-touch {
@@ -430,9 +436,12 @@ footer {
 
 
     .sq-name {
-        font-size: 1.5em;
+        font-size: 1.4em;
         margin: 0;
     }
+
+    
+    
 
     .burger {
         position: absolute;
@@ -445,6 +454,7 @@ footer {
     main {
         display: flex;
         flex-direction: column;
+        
     }
 
     .getin-touch {
@@ -454,7 +464,14 @@ footer {
     }
 
     form {
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; */
+        /* background-color: #ff8c00;
+        border: 2px solid red; */
         margin-top: 20%;
+        
     }
 
     form input {
@@ -552,10 +569,21 @@ footer {
         
     }
 
+   
+
     .sq-name {
-        font-size: 1.2em;
+        animation: fro 500s linear infinite alternate;
+        font-size: 1.1em;
     }
 
+    @keyframes fro {
+        from {
+            padding-left: 90%;
+        }
+        to {
+            padding-right: 10%;
+        }
+    }
     
 
     .burger {
@@ -578,7 +606,7 @@ footer {
     }
 
     form {
-        margin-top: none;
+        margin-top: auto;
         justify-content: center;
         align-items: center;
     }
