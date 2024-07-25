@@ -15,8 +15,8 @@ body {
 
 .container {
     background-color: #fff5ee;
-    /* width: 100vw;
-    height: 100dvh; */
+    width: 100vw;
+    height: 100dvh;
 
     display: grid;
     grid-template-columns: 0.5fr repeat(3, 1fr) 0.5fr;
@@ -284,13 +284,57 @@ main {
     border-radius: 2em;
     grid-row: 2/3;
     grid-column: 2/5;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+   
+    gap: 0.5em;
     padding: 0.5em;
     /* make the space for main and in sq-name margin auto and in container width=100vw and h=100dvh */
     /* flex-grow: 1; */
+}
+
+main div a {
+    /* background-color: #ff8c00; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic img {
+    width: 300px;
+    height: 300px;
+    /* height: fill;     */
+    object-fit: cover;
+    border-radius: 2em;
+    filter: saturate(0);
+    transition: 350ms linear;
+ 
+}
+
+.pic img:hover {
+   filter: saturate(100%);
+}
+
+.four img {
+    /* border-radius: 20em;
+    width: 10px; */
+   object-position: top left;
+
+}
+
+.eight img {
+    /* border-radius: 20em;
+    width: 10px; */
+   object-position: top right;
+
+}
+
+
+.sixteen img {
+    /* border-radius: 20em;
+    width: 10px; */
+   object-position: top left;
+
 }
 
 /* ------------------------------------------------------------- */
@@ -393,10 +437,15 @@ footer {
 
     main {
         display: flex;
-        flex-direction: column;
-        
+        flex-direction: column;        
         justify-content: center;
         align-items: center;        
+    }
+
+    .pic img {
+        width: 100%;
+        height: auto;
+       
     }
 
     /* ------------------------------------------------------- */
