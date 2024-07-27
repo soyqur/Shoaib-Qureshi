@@ -1,0 +1,858 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'RocknRoll One', sans-serif;
+    
+}
+
+
+body {
+    background-color: #fff5ee;
+    /* width: 100vw;
+    height: 100vh; */
+}
+
+.container {
+    background-color: #fff5ee;
+    width: 100vw;
+    height: 100dvh;
+
+    display: grid;
+    grid-template-columns: 0.5fr repeat(3, 1fr) 0.5fr;
+    position: relative;
+    padding: 1em;
+    gap: 0.5em;
+    
+    
+    
+}
+
+/* -----------Header-------------------------------------------- */
+
+.logo, .sq-name, .burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* margin-left: 1em; */
+    /* margin-right: 1em; */
+}
+
+.sq-name {
+    animation: fro 5s linear infinite alternate;
+}
+
+
+@keyframes fro {
+    from {
+        padding-left: 60%;
+    }
+    to {
+        padding-right: 60%;
+    }
+}
+
+
+.logo {
+    /* background-color: rgb(226, 43, 43); */
+    grid-row: 1/2;
+    grid-column: 1/2;
+    
+   
+}
+
+.logo a img {
+    width: 4em;
+    
+    
+}
+
+
+
+
+
+.burger a img {
+    width: 3em;   
+    /* transition: 0.5s all ease; */
+    animation: bur 0.5s linear infinite alternate;
+    
+
+    
+}
+
+.burger a img:hover {
+  
+    filter: invert(17%) sepia(59%) saturate(4640%) hue-rotate(336deg) brightness(98%) contrast(98%);
+    
+    
+}
+
+
+
+
+@keyframes bur {
+    from {
+        filter: invert(39%) sepia(77%) saturate(4833%) hue-rotate(1deg) brightness(103%) contrast(107%);
+    }
+    to {
+        filter: none;
+    }
+}
+
+
+
+
+/* .burger a {
+    position: relative;
+}
+
+.burger a::before {
+    content: '';
+    top: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: chocolate;
+    color: chartreuse;
+    position: absolute;
+    z-index: 0;
+   
+
+    
+} */
+
+
+
+
+
+
+
+/* -----------Animation Bar------------------------------------ */
+
+.sq-name {
+    background-color: #dc143ca4;
+    grid-row: 1/2;
+    grid-column: 2/5;
+    /* font-size: 2rem; */
+    font-size: 2em;
+    border: none;margin: 1em;
+    /* margin: auto; */
+    border-radius: 2em;
+    box-shadow: 2px 2px 2px black inset;
+}
+
+@keyframes sqfade {
+    from {opacity: 1;}
+    from {opacity: 0;}
+}
+
+/* -----------Burger Menu------------------------------------- */
+
+.burger {
+    /* background-color: rgb(164, 89, 234); */
+    grid-row: 1/2;
+    grid-column: 5/6;
+    
+}
+
+
+/* ------------------ASide Bar-------------------------------- */
+
+
+aside {
+    
+    background-color: #ff4400cd;
+    
+    position: fixed;
+    top: 0;
+    /* right: 0; */
+    right: -30%;
+    width: 20%;
+    height: 100%;
+    /* margin-top: 10%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 0;
+    overflow: scroll;
+
+    transition: 500ms;
+    /* transform: translate(230px, 0px); */ 
+    
+}
+
+/* #navbar.active {
+right: 0;
+transition: 350ms;
+} */
+
+
+
+/* aside:hover {
+    right: -20%;
+} */
+
+aside ul {
+    margin-top: 40%;
+    
+}
+
+aside li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.aside-content li  {
+    background-color: chartreuse;;
+    /* border: 2px solid red; */
+    box-shadow: 2px 2px 2px black;
+    
+    margin-top: 40%;
+    list-style: none;
+    border-radius: 3em;
+    padding: 0.5em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    
+}
+
+.aside-content li:hover {
+    background-color: #ff8c00;
+}
+
+
+
+
+.aside-closesign a img {
+   width: 5px;
+}
+
+/* aside ul li a {
+    background-color: #ff4500;
+    width: 1000%;
+} */
+
+
+.aside-closesign:first-child {
+    
+    position: absolute;
+    margin: auto;
+    top: 2%;
+    
+    
+}
+
+ 
+
+
+
+/* .aside-content li {
+    background-color: blueviolet;
+    height: 5em;
+    display: flex;
+    justify-content: space-around;
+} */
+
+/* font------------------------------------------------------ */
+
+aside ul li a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: black;
+    
+    
+    
+}
+
+
+/* ------------------Main Bar-------------------------------- */
+/* ------------------Main Bar-------------------------------- */
+/* ------------------Main Bar-------------------------------- */
+/* ------------------Main Bar-------------------------------- */
+
+/* One way to accomplish this is by setting the overflow property of the <div> to hidden . 
+This will hide any content that exceeds the dimensions of the <div> , preventing it from being displayed outside. 
+Make sure to replace div with the actual class or ID of your <div> element. */
+
+.main-main {
+    background-color: #f0e3da;
+    /* border: 2px solid red; */
+    border-radius: 2em;
+    grid-row: 2/3;
+    grid-column: 2/5;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 0.5em;
+    position: relative;
+    height: fit-content;
+    overflow: clip;
+
+    /* The new value for overflow, clip, is being adopted by all major browsers which will essentially do 
+    the same thing that -moz-hidden-unscrollable */
+   
+   
+  
+    
+    
+    /* make the space for main and in sq-name margin auto and in container width=100vw and h=100dvh */
+    /* flex-grow: 1; */
+}
+
+/* .main-nav {
+    position: relative;
+} */
+
+.main-nav-content {
+    background-color: #fff5ee;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1%;
+    margin: 0 1%;
+    border-radius: 10em;
+    box-shadow: 1px 1px 2px black;
+   
+}
+
+
+main ul li {
+    /* text-decoration: none; */
+    list-style: none;
+}
+
+main a {
+    /* background-color: #ff8c00; */
+    color: #000000;
+    text-decoration: none;
+}
+
+.number {
+    display: inline-block;
+    background-color: #f0e3da;
+    box-shadow: 1px 1px 2px black;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 20em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number:hover {
+    background-color: #ff4400cd;
+
+
+}
+
+/* #mainzone {
+    box-shadow: inset 1px 1px 2px black;
+} */
+
+
+
+/* .main-two-number {
+    background-color: #ff8c00;
+    padding: 0.2em;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+/* .main-imgages {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+} */
+
+
+
+.page-two {
+    /* background-color: #00ff08; */
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.5em;
+    padding: 0.5em;
+    justify-content: space-evenly;
+    align-items: center;
+ 
+   
+   
+   /* animation: none 3000ms linear; */
+  
+   /* 
+   width: 100%;
+   top: 24%;
+   transform: translate(30%); */
+  
+   
+   
+   /* right: 30%; */
+}
+
+@keyframes backward {
+    from {
+        opacity:0 ;
+        translate: 100%;
+    }
+    to {
+        opacity: 1;
+        translate: 0;
+        
+    }
+
+}
+
+.page-one {
+    /* background-color: #ff8c00; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.5em;
+    padding: 0.5em;
+    justify-content: space-evenly;
+    align-items: center;
+   /* translate: -110%;  */
+
+   /* animation: pageone 3000ms linear; */
+
+  
+    
+}
+
+@keyframes foward {
+    from {
+        opacity:1 ;
+        translate: 0;
+    }
+    to {
+        opacity: 2;
+        translate: -100%;
+        
+    }
+
+}
+
+.page-three {
+
+    /* background-color: #ff00aa; */
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.5em;
+    padding: 0.5em;
+    justify-content: space-evenly;
+    align-items: center;
+    
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* @keyframes gallery {
+    from {
+        opacity:0 ;
+        translate: 20%;
+    }
+    to {
+        opacity: 1;
+        translate: 0%;
+    }
+
+} */
+
+/* .part-ek::before {
+    content: "";
+    background-color: chartreuse;
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    right: 30%;
+    z-index: 1;
+} */
+
+.pic a {
+    /* background-color: rgb(255, 0, 0); */
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    
+}
+
+.pic a img {
+    
+    width: 300px;
+    height: 300px;
+    /* height: fill;     */
+    object-fit: cover;
+    border-radius: 2em;
+    filter: saturate(0);
+    transition: 350ms linear ;
+    /* animation:circle 2000ms linear infinite alternate ; */
+   
+ 
+}
+
+.pic img:hover, .pic img:active {
+    filter: saturate(100%);
+   
+    
+   
+    animation: none;
+ }
+
+ .four img {
+    /* border-radius: 20em;
+    width: 10px; */
+   object-position: top left;
+
+}
+
+.eight img {
+    /* border-radius: 20em;
+    width: 10px; */
+   object-position: top right;
+
+}
+
+
+.sixteen a img {
+    /* border-radius: 20em;
+    width: 10px; */
+   object-position: top left;
+   position: relative;
+
+}
+
+.seventeen a img {
+    background-color: #00ff08;
+    width: 266px;
+    
+}
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------- */
+/* ------------------------------------------------------------- */
+/* ------------------------------------------------------------- */
+/* ------------------------------------------------------------- */
+
+
+
+
+
+/* ------------------Footer-------------------------------- */
+
+/* In footer margin is negaitive to overide the container padding properties */
+
+footer {
+    grid-row: 3/4;
+    grid-column: -1/-6;
+    background-color: #f0e3da;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 -1em -1em -1em ;
+    gap: 0.2em;
+   
+}
+
+.foot-text {
+    /* background-color: aqua; */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.foot-text a {
+    font-size: 0.9em;
+    text-decoration: none;
+    color: black;
+    
+   
+}
+
+.foot-icons {
+    width: 15em;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------Tablet--------------------------------------------------------------------------------- */
+/* ------------------Tablet--------------------------------------------------------------------------------- */
+/* ------------------Tablet--------------------------------------------------------------------------------- */
+/* ------------------Tablet--------------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 800px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo {
+        justify-content: flex-start;
+        margin: 0.1em;
+        
+    }
+
+
+    .sq-name {
+        font-size: 1.4em;
+        margin: 0;
+    }
+
+    .burger {
+        position: absolute;
+        top: 1.6em;
+        right: 1.1em;
+    }
+
+  /* -----------------------Main--------------------------- */
+
+    main {
+            
+    }
+
+    .pic img {
+        width: 100%;
+        height: auto;
+       
+    }
+
+    .seventeen a img {
+       width: auto;
+        
+    }
+    
+
+    /* ------------------------------------------------------- */
+
+    .logo a img {
+        width: 2em;
+        
+    }
+
+    .burger a img {
+        width: 2em;
+        
+    }
+
+    /* Aside bar----------------------- */
+
+    /* .aside-content {
+
+       
+        position: absolute;
+        top: 0;
+        right: 0;
+        
+        width: 20vw;
+        height: 50%;
+     
+        
+    } */
+
+    .aside-content li  {
+        border-radius: 3em;
+        padding: 0.2em;
+    }
+
+    aside ul {
+        margin-top: 100%;
+        
+    }
+
+    aside ul li a {
+        font-size: 1.5em;
+       
+        
+    }
+
+    .foot-text  a {
+    font-size: 0.8em;
+        
+       
+    }
+
+    
+    
+
+
+
+}
+
+
+
+
+
+/* ------------------Mobile--------------------------------------------------------------------------------- */
+/* ------------------Mobile--------------------------------------------------------------------------------- */
+/* ------------------Mobile--------------------------------------------------------------------------------- */
+/* ------------------Mobile--------------------------------------------------------------------------------- */
+/* ------------------Mobile--------------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo {
+        justify-content: flex-start;
+        margin: 0.1em;
+        
+    }
+
+    .sq-name {
+        font-size: 1em;
+    }
+
+    
+
+    .burger {
+        position: absolute;
+        top: 1.5em;
+        right: 1.1em;
+    }
+
+/* -----------------------Main------------------------------ */
+
+    
+
+    .pic a img {
+        /* width: 250px;
+        height: 250px; */
+        width: 100%;
+       
+           
+     
+    }
+
+   
+    
+
+    .mainz {
+        font-size: 0.8em;
+    }
+    
+
+  
+
+    /* ------------------------------------------------------- */
+
+
+    
+    .logo a img {
+        width: 1.5em;
+        
+    }
+
+    .burger a img {
+        width: 1.5em;
+        
+    }
+    
+     /*------------------------ Aside bar----------------------- */
+
+
+     aside {
+        width: 30%;
+     }
+
+    
+     aside ul {
+        margin-top: 6em;
+        
+    }
+
+    aside ul li a {
+        font-size: 0.9em;
+       
+        
+    }
+
+    .sq-name {
+        animation: fro 1s linear infinite alternate;
+    }
+    
+
+    @keyframes fro {
+        from {
+            padding-left: 30%;
+        }
+        to {
+            padding-right: 30%;
+        }
+
+}
+
+
+.foot-text  a {
+    font-size: 0.7em;
+        
+       
+    }
+
+
+.foot-text {
+  
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+}
+
+
+
