@@ -74,3 +74,84 @@ function nameChange () {
     sq.style.animation = "sqfade 0.1s linear 25 alternate";
   
 }
+
+// --------------------------------Gallery-------------------------------------------------
+
+const pOne = document.querySelector(".page-one")
+const pTwo = document.querySelector(".page-two")
+const pThree = document.querySelector(".page-three")
+const number = document.querySelector(".number")
+const numberOne = document.getElementById ("mainzone")
+const numberTwo = document.getElementById ("mainztwo")
+const numberThree = document.getElementById ("mainzthree")
+
+
+
+function buttOne () {
+
+pOne.style.display = ("grid");
+pTwo.style.display = ("none");
+pThree.style.display = ("none");
+numberOne.style.boxShadow = "inset 1px 1px 2px black";
+numberTwo.style.boxShadow = "1px 1px 2px black";
+numberThree.style.boxShadow = "1px 1px 2px black";
+
+numberOne.style.backgroundColor = ("chartreuse")
+numberTwo.style.backgroundColor = ("#f0e3da")
+numberThree.style.backgroundColor = ("#f0e3da")
+
+pOne.style.animation= ("backward 350ms linear");
+
+
+// number.style.style.backgroundColor = ("chartreuse")
+// numberOne.style.boxShadow = ("inset 1px 1px 2px black");
+
+
+
+}
+
+
+
+
+function buttTwo () {
+    pOne.style.display = ("none");
+    pTwo.style.display = ("grid");
+    pThree.style.display = ("none");
+    numberOne.style.boxShadow = "1px 1px 2px black";
+    numberTwo.style.boxShadow = "inset 1px 1px 2px black";
+    numberThree.style.boxShadow = "1px 1px 2px black";
+
+    numberOne.style.backgroundColor = ("#f0e3da")
+    numberTwo.style.backgroundColor = ("chartreuse")
+    numberThree.style.backgroundColor = ("#f0e3da")
+
+    pTwo.style.animation= ("backward 350ms linear");
+
+    
+    // numbertwo.style.backgroundColor = ("chartreuse");
+    
+    
+    }
+
+    function buttThree () {
+        const pOne = document.querySelector(".page-one")
+        const pTwo = document.querySelector(".page-two")
+        const pThree = document.querySelector(".page-three")
+        
+        pOne.style.display = ("none");
+        pTwo.style.display = ("none");
+        pThree.style.display = ("grid");
+        numberOne.style.boxShadow = "1px 1px 2px black";
+        numberTwo.style.boxShadow = "1px 1px 2px black";
+        numberThree.style.boxShadow = "inset 1px 1px 2px black";
+
+        numberOne.style.backgroundColor = ("#f0e3da")
+        numberTwo.style.backgroundColor = ("#f0e3da")
+        numberThree.style.backgroundColor = ("chartreuse")
+
+        pThree.style.animation= ("backward 350ms linear");
+
+        
+        }
+    
+
