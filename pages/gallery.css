@@ -284,7 +284,7 @@ This will hide any content that exceeds the dimensions of the <div> , preventing
 Make sure to replace div with the actual class or ID of your <div> element. */
 
 .main-main {
-    background-color: #ff6a00;
+  background-color: #000000;
     /* border: 2px solid red; */
     border-radius: 2em;
     grid-row: 2/3;
@@ -294,7 +294,7 @@ Make sure to replace div with the actual class or ID of your <div> element. */
     gap: 0.5em;
     padding: 0.5em;
     position: relative;
-    height: fit-content;
+    
     overflow: clip;
 
     /* The new value for overflow, clip, is being adopted by all major browsers which will essentially do 
