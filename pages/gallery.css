@@ -284,7 +284,7 @@ This will hide any content that exceeds the dimensions of the <div> , preventing
 Make sure to replace div with the actual class or ID of your <div> element. */
 
 .main-main {
-    background-color: #000000;
+    background-color: #f0e3da;
     /* border: 2px solid red; */
     border-radius: 2em;
     grid-row: 2/3;
