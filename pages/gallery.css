@@ -15,8 +15,8 @@ body {
 
 .container {
     background-color: #fff5ee;
-    width: 100vw;
-    height: 100dvh;
+    /* width: 10vw;
+    height: 10vh; */
 
     display: grid;
     grid-template-columns: 0.5fr repeat(3, 1fr) 0.5fr;
@@ -284,7 +284,7 @@ This will hide any content that exceeds the dimensions of the <div> , preventing
 Make sure to replace div with the actual class or ID of your <div> element. */
 
 .main-main {
-    background-color: #4b4b4b;
+    background-color: #000000;
     /* border: 2px solid red; */
     border-radius: 2em;
     grid-row: 2/3;
@@ -574,7 +574,7 @@ main a {
 /* In footer margin is negaitive to overide the container padding properties */
 
 footer {
-    grid-row: 3/4;
+    /* grid-row: 3/4; */
     grid-column: -1/-6;
     background-color: #f0e3da;
     display: flex;
