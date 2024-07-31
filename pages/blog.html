@@ -58,22 +58,27 @@
     <div class="container">
       <!--------------------------------------------- Logo------------------------------------------------------- -->
       <div class="logo">
-        <a href="../index.html"><img src="../img/Logos.png" alt="" width="45px" /></a>
+        <a href="../index.html"
+          ><img src="../img/Logos.png" alt="" width="45px"
+        /></a>
       </div>
 
       <!--------------------------------------------- Burger Menu------------------------------------------------------- -->
 
       <div class="burger">
         <a href="#" id="show-menu" onclick="showBar ()">
-          <img class="burger-img" src="../img/burger-bar.png" alt="" width="45px"
+          <img
+            class="burger-img"
+            src="../img/burger-bar.png"
+            alt=""
+            width="45px"
         /></a>
       </div>
 
       <!--------------------------------------------- Animation Bar------------------------------------------------------- -->
       <div class="sq-name">
-
-         <!-- Edit --------------->
-        <span id="sq" class="sq">Updating</span>
+        <!-- Edit --------------->
+        <span id="sq" class="sq">Blog</span>
       </div>
       <!--------------------------------------------- Aside------------------------------------------------------- -->
       <aside id="navbar">
@@ -91,8 +96,114 @@
         </ul>
       </aside>
       <!--------------------------------------------- Main------------------------------------------------------- -->
-      <main>
-        
+      <main class="main-main">
+        <div class="main-nav">
+          <ul class="main-nav-content">
+            <li class="mainz previous"><a href="../pages/blog.html">First</a></li>
+            <li id="mainzone" class="mainz number one">
+              <a href="../pages/blog.html" onclick="buttOne ()">1</a>
+            </li>
+            <!-- <li id="mainztwo" class="mainz number two">
+              <a href="#" onclick="buttTwo ()">2</a>
+            </li>
+            <li id="mainzthree" class="mainz number three">
+              <a href="#" onclick="buttThree ()">3</a>
+            </li> -->
+            <li class="mainz last"><a href="#">Last</a></li>
+          </ul>
+        </div>
+
+        <div class="main-index-body">
+          <!-- Topic One -->
+
+          <div class="main-index-topics" data-id="1">
+            <div class="topic-thumbnail">
+              <a href="../blog pages/creatine.html"
+                ><img
+                  class="crea-image"
+                  src="../img/creatine1.jpg"
+                  alt=""
+                  width="200px"
+              /></a>
+            </div>
+
+            <div class="main-index topic-one-header">
+              <h1><a href="../blog pages/creatine.html">Creatine</a></h1>
+              <p>
+                Creatine is one of the most widely used and researched
+                supplements in the sports and fitness industry. It is renowned
+                for its potential to enhance athletic performance, increase
+                muscle mass, and aid in recovery.
+              </p>
+
+              <!-- like -->
+              <div class="like" dat-like-id="7712">
+                <button id="likebtn" class="likebtn">
+                  <a href="#" target="" rel=""
+                    ><img src="../img/like.png" alt="" width="15em"
+                  /></a>
+                </button>
+                <input
+                  type="number"
+                  id="input-1"
+                  class="input-1"
+                  value="0"
+                  name=""
+                />
+                <button id="dislikebtn" class="dislikebtn">
+                  <a href="#" target="" rel=""
+                    ><img src="../img/like.png" alt="" width="15em"
+                  /></a>
+                </button>
+                <input
+                  type="number"
+                  id="input-2"
+                  class="input-2"
+                  value="0"
+                  name=""
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Topic Two -->
+
+          <div class="main-index-topics" data-id="2">
+            <div class="topic-thumbnail">
+              <a href="../blog pages/carbs.html"
+                ><img src="../img/carbs.jpg" alt="" width="200px"
+              /></a>
+            </div>
+
+            <div class="main-index topic-one-header">
+              <h1><a href="../blog pages/carbs.html">Carbohydrates</a></h1>
+              <p>
+                Carbohydrates are a primary source of energy for our bodies, playing a crucial role in our overall
+                health and well-being. 
+              </p>
+              <div class="like">
+                <button id="likebtn">
+                  <a href="#" target="" rel=""
+                    ><img src="../img/like.png" alt="" width="15em"
+                  /></a>
+                </button>
+                <input type="number" id="input-1" value="0" name="" />
+                <button id="dislikebtn">
+                  <a href="#" target="" rel=""
+                    ><img src="../img/like.png" alt="" width="15em"
+                  /></a>
+                </button>
+                <input type="number" id="input-2" value="0" name="" />
+              </div>
+            </div>
+          </div>
+
+
+
+          
+        </div>
+        <!-- </div>
+        </div> -->
       </main>
 
       <!--------------------------------------------- Footer------------------------------------------------------- -->
@@ -101,10 +212,11 @@
         <div class="foot-text">
           <a target="_blank" href="../copyright.html">© 2020 Shoaib Qureshi </a>
           <a target="_blank" href="../privacy-policy.html">Privacy Policy</a>
-          <a target="_blank" href="../Terms & Condition.html">Terms & Condition</a>
+          <a target="_blank" href="../Terms & Condition.html"
+            >Terms & Condition</a
+          >
         </div>
-
-       <div class="foot-icons">
+        <div class="foot-icons">
           <a href="https://www.linkedin.com/in/shoaib-qureshi-4169a577/"
             ><img src="../img/linkedin.png" alt="" width="20px"
           /></a>

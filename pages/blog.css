@@ -15,8 +15,8 @@ body {
 
 .container {
     background-color: #fff5ee;
-    /* width: 100vw;
-    height: 100dvh; */
+    width: 100vw;
+    height: 100dvh;
 
     display: grid;
     grid-template-columns: 0.5fr repeat(3, 1fr) 0.5fr;
@@ -137,7 +137,7 @@ body {
     /* font-size: 2rem; */
     font-size: 2em;
     border: none;margin: 1em;
-    /* margin: auto; */
+    margin: auto;
     border-radius: 2em;
     box-shadow: 2px 2px 2px black inset;
 }
@@ -242,7 +242,7 @@ aside li a {
 } */
 
 
-ul li:first-child {
+.aside-closesign:first-child {
     
     position: absolute;
     margin: auto;
@@ -283,13 +283,209 @@ main {
     grid-row: 2/3;
     grid-column: 2/5;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     gap: 1em;
     padding: 0.5em;
+    /* height: 100vdh; */
     /* make the space for main and in sq-name margin auto and in container width=100vw and h=100dvh */
     /* flex-grow: 1; */
 }
+
+/* .main-nav {
+    position: relative;
+} */
+
+.main-nav-content {
+    background-color: #fff5ee;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1%;
+    margin: 0 1%;
+    border-radius: 10em;
+    box-shadow: 1px 1px 2px black;  
+   
+    
+   
+}
+
+.previous, .last {
+    font-size: 1.3em;
+}
+
+
+main ul li {
+    /* text-decoration: none; */
+    list-style: none;
+    
+}
+
+main a {
+    /* background-color: #ff8c00; */
+    color: #000000;
+    text-decoration: none;
+}
+
+.number {
+    display: flex;
+    background-color: #f0e3da;
+    box-shadow: 1px 1px 2px black;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 20em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number:hover, .number:active  {
+    background-color: #ff4400cd;
+   
+
+
+}
+
+.number:active  {
+    background-color: chartreuse;
+    
+    box-shadow: inset 1px 1px 2px black;
+
+
+}
+
+
+/* -----------------Main Text---------------- */
+.main-index-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    
+}
+
+
+.main-index-topics {
+    background-color: #fff5ee;
+    box-shadow: 1px 1px 2px black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5%;
+    border-radius: 2em;
+    gap: 0.5em;
+}
+
+
+
+
+.topic-thumbnail a img {
+    /* width: 100%; */
+    display: block;
+    border-radius: 5em;
+    /* border: 5px solid #dc143ca4; */
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+    z-index: -1;
+    /* position: relative; */
+    
+
+}
+
+.main-index h1 {
+    /* background-color: blue; */
+    
+    font-size: 1.5em;
+}
+
+
+.main-index h1 a:hover {
+    color: #ff4400cd;
+   
+}
+
+.main-index h1 a:active {
+    color: chartreuse;
+    text-shadow:  1px 1px rgb(0, 0, 0), -1px -1px #ffffff;
+ }
+
+
+.main-index p {
+    text-align: justify;
+    font-size: 1.2em;
+    
+}
+
+.main-index {
+    /* background-color: chartreuse; */
+    position: relative;
+}
+
+
+
+/* -----------------Topics Index--------------- */
+
+.like {
+    display: none;
+    /* background-color: brown; */
+    /* display: inline-flex;
+    justify-content: end; */
+    position: absolute;
+    /* width: fit-content; */
+    bottom: 0;
+    right: 1em;
+   
+
+}
+
+.like button  {
+    /* background-color: #ff6a00; */
+    border: none;
+    background: none;
+    border-radius: 2em;
+    /* cursor: pointer; */
+    
+}
+
+.like button a img:active, .dislike button a img:active   {
+    filter: invert(39%) sepia(77%) saturate(4833%) hue-rotate(1deg) brightness(103%) contrast(107%);
+    /* color: blue; */
+    transform: scale(1.2);
+   
+}
+
+.like input {
+
+    
+    border: none;
+    /* background: rgb(55, 55, 55); */
+   
+  color: #ff0000;   
+  
+    width: 2em;
+}
+
+/* To remove the spinner from the input, ita an arrrow facing up and down */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none
+}
+
+input[type="number"]{
+    -moz-appearance: textfield;
+} 
+    
+
+
+/* #input-1, #input-2 {
+    background-color: #ff6a00;
+    border: 2px solid red;
+   
+} */
+
+
 
 /* ------------------------------------------------------------- */
 /* ------------------------------------------------------------- */
@@ -306,13 +502,14 @@ main {
 footer {
     grid-row: 3/4;
     grid-column: -1/-6;
-    background-color: #f0e3da;
+    /* background-color: #ff6a00; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 -1em -1em -1em ;
     gap: 0.2em;
+   
    
 }
 
@@ -388,13 +585,47 @@ footer {
 
   /* -----------------------Main--------------------------- */
 
-    main {
+    /* main {
         display: flex;
         flex-direction: column;
         
         justify-content: center;
         align-items: center;        
+    } */
+
+    /* --------Topics Index------ */
+
+    .main-index-topics {
+       
+        display: flex;
+        flex-direction: column;
+        
+        
+        
+        padding: 5%;
+   }
+
+   .topic-thumbnail {
+        /* background-color: #ff6a00; */
+        display: block;
+        
+        align-self: flex-start;
+   }
+
+   .main-index h1 {
+    font-size: 1.4em;
+}
+
+.main-index p {
+    text-align: justify;
+    font-size: 1.1em;
+    
+}
+
+    .previous, .last {
+        font-size: 1.2em;
     }
+    
 
     /* ------------------------------------------------------- */
 
@@ -445,6 +676,10 @@ footer {
        
     }
 
+
+
+    
+
     
     
 
@@ -488,14 +723,49 @@ footer {
 
 /* -----------------------Main------------------------------ */
 
-    main {
+    /* main {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         
        
+    } */
+
+
+    .mainz {
+        font-size: 0.8em;
     }
+
+    .previous, .last {
+        font-size: 1em;
+    }
+    
+
+    /* -----------------Topics Index--------------- */
+
+
+.topic-thumbnail {    
+    align-self: center;
+}
+
+.main-index h1 {
+    font-size: 1em;
+   }
+
+
+.main-index p {
+    font-size: 0.9em;
+}
+
+.like {
+    /* background-color: #ff6a00; */
+    position: relative;
+    width: fit-content;
+    bottom: 0;
+    left: 0;
+
+}
 
   
 
@@ -564,7 +834,20 @@ footer {
 
 
 
+
+
 }
+
+ 
+
+
+
+
+
+
+
+
+
 
 
 
