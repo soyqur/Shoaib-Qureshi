@@ -153,5 +153,18 @@ function buttTwo () {
 
         
         }
+
+
+// for Resume
+
+const toTopButton = document.querySelector("#to-top");
+
+document.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    toTopButton.classList.add("show");
+  } else {
+    toTopButton.classList.remove("show");
+  }
+});
     
 
