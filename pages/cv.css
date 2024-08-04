@@ -17,6 +17,8 @@ html {
 --box-shadow: 0px 0px 3px black;
 --font-size: 1.2em;
 --background-color: #d3d3d363;
+--h3-color: rgb(53, 92, 176);
+  
 }
 
 
@@ -43,6 +45,11 @@ li a {
     color: black;
     
 }
+
+/* section a {
+    text-decoration: none;
+    color: black;
+} */
 
 /* --------------Header------------------------------------------ */
 
@@ -130,7 +137,6 @@ header {
               /* translate: -10px; */
         /* transform: rotate(36deg); */
         animation: room 400ms ease alternate 12;
-       
         
     }
 
@@ -152,8 +158,9 @@ to {
 
 .sqname h3 {
     font-size: 3em;
-    color: var(--header-color);
+    color: var(--h3-color);
     text-shadow: var(--text-shadow);
+    animation: zoomin 700ms ease;
 }
 
 .soyab {
@@ -164,31 +171,37 @@ to {
     border-radius: 2em;
     box-shadow: var(--box-shadow);
     /* animation: rotateimage 3000ms ease-in-out alternate 1; */
-    
+    animation: zoomin 700ms ease;
 }
 
 .meformal-img:hover {
-    animation: rotateimage 500ms ease alternate 10;
+    filter: grayscale(100%);
     
 }
 
-.meformal-img:active {
+/* .meformal-img:active {
     animation: none;
     
-}
+} */
 
-@keyframes rotateimage {
+@keyframes zoomin {
     from {
-        /* transform: rotate(0deg); */
-       filter: grayscale(0%);
-      
-       
-        
+       transform: scale(0);
     }
     to {
-        /* transform: rotate(360deg); */
-        filter: grayscale(100%);
+        transform: scale(1);
     }}
+
+
+    @keyframes changecolor {
+        from {
+           filter: grayscale(0%);
+            
+        }
+        to {
+            filter: grayscale(100%);
+        }}
+    
 
 
 
@@ -270,45 +283,49 @@ aside ul {
     background-color: blueviolet;
 } */
 
-.left::before {
+.left-side section h3 {
+    /* background-color: brown; */
+    width: 100%;
+    position: relative;
+}
+
+
+
+.left-side section h3::before {
     /* background-color: darkmagenta; */
     content: "";
-  
+    top: 30px;
     width: 12px;
     height: 2px;
     background-color: black;
     position: absolute;
-    
-    
-}
-
-.connect-me-h3::before {
-    top: 30px;
- 
-}
-
-.skills-h3::before {
-    /* top: 338px; */
-    top: 30px;
-    
-}
-
-.interest-h3::before {
-    /* top: 742px; */
-    top: 30px;
-   
-   
-}
-
-
-.left:hover::before {
-    background-color: rgb(255, 0, 0);
-    width: 98%;
-    height: 2px;
     transition: 450ms ease-in-out;
     
     
 }
+
+.connect-me-h3:hover::before {
+    background-color: rgb(255, 0, 0);
+    width: 123px;
+   
+}
+
+
+.skills-h3:hover::before {
+    background-color: rgb(255, 0, 0);
+    width: 55px;
+  
+    
+}
+
+.interest-h3:hover::before {
+    background-color: rgb(255, 0, 0);
+    width: 80px;
+    
+} 
+
+
+
 
 
 
@@ -333,6 +350,37 @@ aside ul {
 
 
 
+.qualification h3 {
+    /* background-color: greenyellow; */
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.qualification h3::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 12px;
+    height: 2px;
+    bottom: 0;
+    transition: 450ms ease-in-out;
+}
+
+.qualification .qualification-h3:hover::before {
+    background-color: red;
+    width: 130px;
+}
+
+.qualification .other-qualification-h3:hover::before {
+    background-color: red;
+    width: 192px;
+}
+
+
+
+
+
 /* --------------Main-------------------- */
 
 main {
@@ -346,8 +394,30 @@ main {
     text-align: justify;
 }
 
+main h3 {
+    /* background-color: brown; */
+    position: relative;
+}
+
+main h3::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    top: 30px;
+    width: 12px;
+    height: 2px;
+    transition: 450ms ease-in-out;
+}
+
+main h3:hover:before {
+    background-color: red;
+    width: 170px;
+}
 
 
+
+
+/* PDF------------------------- */
 
 .pdf img {
     width: 40px;
@@ -413,6 +483,7 @@ main {
 
     header {
         gap: 0.5em;
+        
     }
 
 
