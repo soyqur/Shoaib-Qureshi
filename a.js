@@ -183,10 +183,11 @@ function netTravel() {
   alert("It is a part of my job")
 }
 
+function microSoft() {
+  alert("I use it for making all the reports & Please click the resume pdf link at the bottom of the page, made using MS Word");
+}
 
-// function email() {
-//   alert("Please fill the Contact Form");
-// }
+
 
 // for Resume  End----------------------------------------
     
