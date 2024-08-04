@@ -155,7 +155,7 @@ function buttTwo () {
         }
 
 
-// for Resume
+// for Resume -----------------------------------------
 
 const toTopButton = document.querySelector("#to-top");
 
@@ -166,5 +166,28 @@ document.addEventListener("scroll", () => {
     toTopButton.classList.remove("show");
   }
 });
+
+function callMe () {
+  alert("This number is available on WhatsApp as well");
+}
+
+function skillHtml () {
+  alert("This digital resume has been built using HTML, CSS & JavaScript")
+}
+
+function cooking () {
+  alert("My cooking is decent enought to eat")
+}
+
+function netTravel() {
+  alert("It is a part of my job")
+}
+
+
+// function email() {
+//   alert("Please fill the Contact Form");
+// }
+
+// for Resume  End----------------------------------------
     
 
