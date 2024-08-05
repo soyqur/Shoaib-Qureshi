@@ -12,19 +12,42 @@ html {
 
 :root {
 --whitesmoke: #f5f5f5;
+--dark-color: rgb(0, 0, 0);
+--gray-color: gray;
 --header-color: #2f2f2f;
 --text-shadow: 1px 1px 1px black;
 --box-shadow: 0px 0px 3px black;
 --font-size: 1.2em;
---background-color: #d3d3d363;
+--box-color: #d3d3d363;
 --h3-color: rgb(53, 92, 176);
+--chartreuse-color: chartreuse;
+--yellowgreen-color: yellowgreen;
+
+--background-color: var(--whitesmoke);
+--foreground-color: var(--box-color);
+
+
   
+}
+
+@media (prefers-colo-scheme: dark) {
+
+    :root {
+        --background-color: var(--dark-color);
+        --foreground-color: var(--gray-color);
+        
+        
+          
+        }
+
+    
 }
 
 
 body {
-    background-color: var(--whitesmoke);
+    background-color: var(--background-color);
     font-family: "Roboto", sans-serif;
+    user-select: none;
 }
 
 
@@ -43,12 +66,20 @@ body {
 li a {
     text-decoration: none;
     color: black;
-    
 }
 
 /* section a {
     text-decoration: none;
     color: black;
+} */
+
+/* ul {
+    list-style: none;
+}
+
+ul li::before {
+    content: "e";
+    color: chartreuse;
 } */
 
 /* --------------Header------------------------------------------ */
@@ -79,7 +110,7 @@ li a {
 }
 
 #to-top:hover {
-    background-color: chartreuse;
+    background-color: var(--chartreuse-color);
     bottom: 35px;
 }
 
@@ -142,7 +173,7 @@ header {
 
 @keyframes zoom {
 from {
-    color: yellowgreen;
+    color: var(--yellowgreen-color);
 }
 to {
     color: black;
@@ -153,7 +184,7 @@ to {
         color: var(--header-color);
     }
     to {
-        color: yellowgreen;
+        color: var(--yellowgreen-color);
     }}
 
 .sqname h3 {
@@ -161,10 +192,16 @@ to {
     color: var(--h3-color);
     text-shadow: var(--text-shadow);
     animation: zoomin 700ms ease;
+    transition: 600ms linear;
+}
+
+.sqname h3:hover {
+   color: var(--header-color);
+   transition: 6ms linear;
 }
 
 .soyab {
-    color: yellowgreen;
+    color: var(--yellowgreen-color);
 }
 
 .meformal-img {
@@ -219,7 +256,7 @@ to {
 /* --------------Aside-------------------- */
 
 aside {
-    background-color: var(--background-color);
+    background-color: var(--foreground-color);
     grid-row: 3/4;
     grid-column: 2/3;
     padding-left: 0.5em;
@@ -246,11 +283,13 @@ aside ul {
 }
 
 .left-side li a:hover {
-    background-color: chartreuse;
+    background-color: var(--chartreuse-color);
     width: 100%;
     border-radius: 0.5em;
     box-shadow: var(--box-shadow);
 }
+
+
 
 .left-side li a img {
     width: 30px;
@@ -341,7 +380,7 @@ aside ul {
 .qualification-area {
     grid-row: 3/4;
     grid-column: 3/6;
-    background-color: var(--background-color);
+    background-color: var(--foreground-color);
     padding-left: 1em;
     font-size: var(--font-size);
     line-height: 1.5em;
@@ -386,7 +425,7 @@ aside ul {
 main {
     grid-row: 4/5;
     grid-column: 2/6;
-    background-color: var(--background-color);
+    background-color: var(--foreground-color);
     padding: 0em 1em;
     font-size: var(--font-size);
     line-height: 2em;
@@ -419,29 +458,39 @@ main h3:hover:before {
 
 /* PDF------------------------- */
 
+.pdf a {
+    background-color: var(--foreground-color);
+    box-shadow: var(--box-shadow);
+    border: 1px solid black;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 200ms linear;
+    margin: 0.5em 0;
+}
+
 .pdf img {
-    width: 40px;
-    margin-top: 1em;
-    
-    /* color: black;
-    background-color: chocolate; */
-    /* box-shadow: var(--box-shadow); */
+    width: 30px;
+}
+
+.pdf a:hover {
+    background-color: var(--chartreuse-color);
     
 }
 
-.pdf img:hover {
-    
-    background-color: chartreuse;
-    box-shadow: var(--box-shadow);
-   
-}
+.pdf a:active {
+    background-color: #67c608;
+   border: none;
+    box-shadow: inset 2px 2px 2px rgb(0, 0, 0);
+    }
 
-.pdf img:active {
-    
-    background-color: crimson;
-    box-shadow: var(--box-shadow);
-   
-}
+/* box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.592),
+inset -2px -2px 5px rgba(255, 255, 255, 0.464);     */
+
 
 
 
@@ -533,6 +582,16 @@ main h3:hover:before {
 
     #to-top img {
         width: 20px;
+    }
+
+    .pdf a {
+        width: 2em;
+        height: 2em;
+        border-radius: 2em;
+    }
+    
+    .pdf img {
+        width: 25px;
     }
 
     
