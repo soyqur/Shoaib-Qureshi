@@ -142,6 +142,10 @@ body {
     box-shadow: 2px 2px 2px black inset;
 }
 
+.sq-name .sq {
+    margin: 0 -100%;
+}
+
 @keyframes sqfade {
     from {opacity: 1;}
     from {opacity: 0;}
