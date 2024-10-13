@@ -69,7 +69,8 @@ function nameChange () {
     const sqName = document.querySelector(".sq-name")
 
 
-    sq.innerHTML = ("soyqureshi@gmail.com");
+    //sq.innerHTML = ("soyqureshi@gmail.com");
+    sq.innerHTML = ("sho.qu973@gmail.com");
     sq.style.color = ("chartreuse");
     sq.style.animation = "sqfade 0.1s linear 25 alternate";
   
